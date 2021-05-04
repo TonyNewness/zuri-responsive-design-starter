@@ -1,35 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
 }
-
-div.nav-bar {
+ul {
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: space-between;
-    padding: 1rem 6rem;
-    width: 100vw;
-    background: #304353;
+}
+li{
+    list-style: none;
+    margin: 0 2vw;
+    font-size: 3vh;
 }
 
-div.logo {
+nav {
+    display: flex;
+    padding: 2rem 0rem;
+    justify-content: space-around; 
+    width: auto ;
+    background: #304353;
+    
+}
+
+ div.logo {
     font-size: 1.5rem;
     color: #bcc3c7;
-}
-
-ul.nav-links {
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-ul li {
-    margin: 0 2vw;
-    list-style: none;
-    font-size: 1.1rem;
 }
 
 ul li a {
@@ -40,17 +37,97 @@ ul li a {
 
 ul li a:hover {
     color: #304353;
-    background: #fff;
-    padding: 0.5rem;
+    background-color: #fff;
 }
+
+a.icon{
+    display: none;
+}
+
+
+
+@media screen and (max-width:768px){
+
+    .navlinks a:not(:first-child) {display: none;}
+
+    .navlinks a.icon {
+        float: right;
+        display: block;
+      }
+
+    nav{
+        width: auto;
+    }
+   
+    
+}
+
+ 
+@media screen and (max-width:768px){
+
+    .navlinks.responsive {position: relative;}
+
+    .navlinks.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+    .navlinks.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+/* Responsive menu ends here */
+    
+   
+
+   
+    h3, .h3{
+        text-align: center;
+        font-size: -10%;
+        padding: 1vw auto;
+    }
+    .hero-section {
+        margin-top: -100px;
+        font-size: 1rem;
+    }
+    .hero-background-pos{
+        visibility: hidden;
+    }
+
+    div.hero-background {
+        height: 100vw;
+    }
+   
+
+    div.background {
+        height: 100w;
+        
+    }
+    div.snapshot-box-content {
+        flex-direction: column;
+    }
+    .footer-input{
+        flex-direction: column;
+    }
+    .footer-input input{
+        margin-top: 1em;
+        width: 6em;
+    }  
+
+   
+}
+/* responsive style ends here */
+
 
 div.hero-section {
     background: #304353;
     padding: 10rem;
 }
-
 div.hero-content-heading {
     text-align: center;
+    
 }
 
 div.hero-content-heading h3 {
@@ -98,9 +175,9 @@ div.hero-background {
 div.background {
     background: #fff;
     box-shadow: 2px 2px 15px 0 rgb(135 135 135 / 40%);
-    padding: 15px 40px;
-    width: 550px;
-    height: 220px;
+    padding: 15px 50px;
+    width: 540px;
+    height: auto;
     position: relative;
 }
 
@@ -122,7 +199,7 @@ div.background p {
 div.hero-background-pos {
     position: absolute;
     right: 0px;
-    left: 66%;
+    left: 69%;
     background: #fff;
     width: 140px;
     height: 140px;
